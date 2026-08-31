@@ -2,45 +2,41 @@
 
 ## Overview
 
-This project presents the design and functional verification of a Traffic Management System using SystemVerilog and the Universal Verification Methodology (UVM). The objective is to develop a reliable traffic controller and verify its functionality using a modular UVM-based verification environment.
+This project presents the RTL design and UVM-based functional verification of a Traffic Management System using SystemVerilog.
 
-## Features
+The Traffic Management System is designed to control traffic signals for a T-shaped road intersection using a finite state machine (FSM). The RTL design is simulated and analyzed using Xilinx Vivado, while the verification environment is developed using SystemVerilog and UVM.
 
-- RTL design using SystemVerilog
-- UVM-based verification environment
-- Sequence-based stimulus generation
-- Functional coverage collection
-- Self-checking scoreboard
-- Modular verification components
-
-## Tools Used
-
-- SystemVerilog
-- UVM
-- Siemens QuestaSim
-- Synopsys Verdi
-- Synopsys TestMAX
-- EDA Playground
-
-## Repository Structure
+## Project Structure
 
 ```text
-Traffic-Management-System-UVM/
+Traffic-Management-System/
 │
-├── rtl/
+├── RTL/
 │   └── traffic_controller.sv
 │
-├── uvm/
-│   ├── traffic_interface.sv
+├── UVM/
 │   ├── traffic_item.sv
 │   ├── traffic_sequence.sv
 │   ├── traffic_driver.sv
 │   ├── traffic_monitor.sv
-│   ├── traffic_coverage.sv
 │   ├── traffic_scoreboard.sv
+│   ├── traffic_coverage.sv
 │   ├── traffic_agent.sv
 │   ├── traffic_env.sv
 │   ├── traffic_test.sv
+│   ├── traffic_interface.sv
 │   └── tb_top.sv
+│
+├── Simulation/
+│   ├── simulation_output.txt
+│   └── waveform.png
+│
+├── Vivado_Results/
+│   ├── RTL_Schematic/
+│   ├── Synthesis_Schematic/
+│   ├── Utilization/
+│   ├── Timing/
+│   ├── Power/
+│   └── Device_Package/
 │
 └── README.md
