@@ -2,16 +2,16 @@
 
 ## Overview
 
-This project presents the design and functional verification of a Traffic Management System using SystemVerilog and the Universal Verification Methodology (UVM). The objective is to develop a reliable traffic controller and verify its functionality using a reusable, constrained-random verification environment.
+This project presents the design and functional verification of a Traffic Management System using SystemVerilog and the Universal Verification Methodology (UVM). The objective is to develop a reliable traffic controller and verify its functionality using a modular UVM-based verification environment.
 
 ## Features
 
 - RTL design using SystemVerilog
 - UVM-based verification environment
-- Constrained-random test generation
+- Sequence-based stimulus generation
 - Functional coverage collection
 - Self-checking scoreboard
-- Modular and reusable verification components
+- Modular verification components
 
 ## Tools Used
 
@@ -22,11 +22,25 @@ This project presents the design and functional verification of a Traffic Manage
 - Synopsys TestMAX
 - EDA Playground
 
-## Repository Status
+## Repository Structure
 
-This repository is currently being organized. Source code, simulation results, waveforms, and project documentation will be uploaded soon.
-
-## Author
-
-**Chinmay G Bhat**
-M.Tech in VLSI
+```text
+Traffic-Management-System-UVM/
+│
+├── rtl/
+│   └── traffic_controller.sv
+│
+├── uvm/
+│   ├── traffic_interface.sv
+│   ├── traffic_item.sv
+│   ├── traffic_sequence.sv
+│   ├── traffic_driver.sv
+│   ├── traffic_monitor.sv
+│   ├── traffic_coverage.sv
+│   ├── traffic_scoreboard.sv
+│   ├── traffic_agent.sv
+│   ├── traffic_env.sv
+│   ├── traffic_test.sv
+│   └── tb_top.sv
+│
+└── README.md
